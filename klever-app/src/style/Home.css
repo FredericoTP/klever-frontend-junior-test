@@ -14,23 +14,6 @@
   margin: 0 auto;
 }
 
-.home-title-box {
-  display: flex;
-  align-items: center;
-}
-
-.home-image {
-  width: 40px;
-  color: yellow;
-  margin: 0 10px 0 0;
-}
-
-.home-title {
-  color: white;
-  font-family: Poppins, sans-serif;
-  font-size: 1rem;
-}
-
 .home-title-btn {
   background-color: rgba(170,51,181,255);
   border-radius: 5px;
@@ -41,6 +24,7 @@
   font-size: .8rem;
   font-weight: 600;
   padding: 5px 10px;
+  text-decoration: none;
 }
 
 .home-title-btn:hover {

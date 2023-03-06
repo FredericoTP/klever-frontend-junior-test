@@ -1,7 +1,9 @@
+import Header from "../components/Header";
+
 function Home() {
   return (
     <div>
-      <p>asd</p>
+      <Header />
     </div>
   )
 }

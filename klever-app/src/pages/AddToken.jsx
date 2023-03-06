@@ -3,6 +3,7 @@ import Title from "../components/Title";
 import Form from "../components/Form";
 import { useContext } from "react";
 import TokenContext from "../context/TokenContext";
+import '../style/AddToken.css';
 
 function AddToken() {
   const { tokenInput, balanceInput, handleClickSave, handleClickBack } = useContext(TokenContext);
@@ -10,17 +11,23 @@ function AddToken() {
   return (
     <div className="addtoken-container">
       <Header />
-      <main className="">
+      <main className="addtoken-main">
         <section>
           <Title />
         </section>
-        <section>
-          <h2>Add Token</h2>
-          <button onClick={ handleClickBack }>Voltar</button>
+        <section className="addtoken-subtitle-container">
+          <h2 className="addtoken-subtitle">Add Token</h2>
+          <button
+            className="addtoken-back-btn"
+            onClick={ handleClickBack }
+          >
+            Voltar
+          </button>
         </section>
         <Form />
-        <section>
+        <section className="addtoken-btn-container">
           <button
+            className="addtoken-save-btn"
             onClick={ handleClickSave }
             disabled={ tokenInput.value === "" || balanceInput.value === "" }
           >

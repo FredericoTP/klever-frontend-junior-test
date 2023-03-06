@@ -1,0 +1,37 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: .6rem;
+  width: 85%;
+}
+
+.form-label {
+  color: white;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: .8rem;
+  padding-bottom: 3px;
+}
+
+.form-input {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  padding: 4px 7px;
+  font-size: .8rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-small {
+  font-family: Poppins, sans-serif;
+  color: orange;
+  padding-top: 3px;
+  font-size: .65rem;
+}

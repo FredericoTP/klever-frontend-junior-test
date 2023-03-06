@@ -15,9 +15,9 @@
 }
 
 .home-title-btn {
-  background-color: rgba(170,51,181,255);
+  background-color: rgb(170,51,181);
   border-radius: 5px;
-  border: 1px solid rgba(124,47,139,255);
+  border: 1px solid rgb(124,47,139);
   color: white;
   cursor: pointer;
   font-family: Poppins, sans-serif;

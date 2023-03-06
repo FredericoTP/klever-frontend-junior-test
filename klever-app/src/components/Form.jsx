@@ -1,14 +1,16 @@
 import { useContext } from "react";
 import TokenContext from "../context/TokenContext";
+import '../style/Form.css';
 
 function Form() {
   const { tokenInput, balanceInput, erro } = useContext(TokenContext);
 
   return (
-    <form>
-      <div>
-        <label htmlFor="token">Token</label>
+    <form className="form-container">
+      <div className="form-box">
+        <label className="form-label" htmlFor="token">Token</label>
         <input
+          className="form-input"
           id="token"
           type="text"
           value={ tokenInput.value }
@@ -16,22 +18,23 @@ function Form() {
           placeholder="KLV"
         />
         {
-          erro && <small>Token já existente!</small>
+          erro && <small className="form-small">Token já existente!</small>
         }
       </div>
-      <div>
-        <label htmlFor="balance">Balance</label>
+      <div className="form-box">
+        <label className="form-label" htmlFor="balance">Balance</label>
         <input
+          className="form-input"
           id="balance"
           type="text"
           value={ balanceInput.value }
           onChange={ balanceInput.handleChange}
           placeholder="10,250.50"
         />
+        {
+          (tokenInput.value === "" || balanceInput.value === "") && <small className="form-small">Preencha todos os campos!</small>
+        }
       </div>
-      {
-        (tokenInput.value === "" || balanceInput.value === "") && <small>Preencha todos os campos!</small>
-      }
     </form>
   )
 }

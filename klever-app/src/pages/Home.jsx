@@ -1,17 +1,18 @@
 import Header from '../components/Header';
 import image from '../assets/shooting-star.svg';
+import '../style/Home.css';
 
 function Home() {
   return (
-    <div>
+    <div className="home-container">
       <Header />
-      <main>
-        <section>
-          <div>
-            <img src={ image } alt="shooting-star" />
-            <h1>Wish Wallet</h1>
+      <main className="home-box">
+        <section className="home-title-container">
+          <div className="home-title-box">
+            <img className="home-image" src={ image } alt="shooting-star" />
+            <h1 className="home-title">Wish Wallet</h1>
           </div>
-          <button>Add Token</button>
+          <button className="home-title-btn">Add Token</button>
         </section>
       </main>
     </div>

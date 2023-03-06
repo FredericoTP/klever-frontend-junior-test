@@ -35,6 +35,7 @@ function TokenProvider({ children }) {
       const tokens = JSON.parse(localStorage.getItem('tokens'));
       const newTokens = JSON.stringify([...tokens, {token: tokenInput.value.toUpperCase(), balance: balanceInput.value}])
       localStorage.setItem('tokens', newTokens);
+      setErro(false);
       cleanInputs();
       history.push("/");
     }
@@ -51,8 +52,14 @@ function TokenProvider({ children }) {
     }
   }
 
+  function handleClickBack() {
+    setErro(false);
+    cleanInputs();
+    history.push("/");
+  }
+
   return (
-    <TokenContext.Provider value={ { tokenInput, balanceInput, handleClickSave, erro } }>
+    <TokenContext.Provider value={ { tokenInput, balanceInput, handleClickSave, erro, handleClickBack } }>
       {children}
     </TokenContext.Provider>
   )

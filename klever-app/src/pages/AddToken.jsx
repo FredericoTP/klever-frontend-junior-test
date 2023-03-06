@@ -5,7 +5,7 @@ import { useContext } from "react";
 import TokenContext from "../context/TokenContext";
 
 function AddToken() {
-  const { tokenInput, balanceInput, handleClickSave } = useContext(TokenContext);
+  const { tokenInput, balanceInput, handleClickSave, erro, handleClickBack } = useContext(TokenContext);
 
   return (
     <div>
@@ -16,7 +16,7 @@ function AddToken() {
         </section>
         <section>
           <h2>Add Token</h2>
-          <Link to="/">Voltar</Link>
+          <button onClick={ handleClickBack }>Voltar</button>
         </section>
         <section>
           <div>
@@ -26,7 +26,11 @@ function AddToken() {
               type="text"
               value={ tokenInput.value }
               onChange={ tokenInput.handleChange}
+              placeholder="KLV"
             />
+            {
+              erro && <small>Token já existente!</small>
+            }
           </div>
           <div>
             <label htmlFor="balance">Balance</label>
@@ -35,8 +39,12 @@ function AddToken() {
               type="text"
               value={ balanceInput.value }
               onChange={ balanceInput.handleChange}
+              placeholder="10,250.50"
             />
           </div>
+          {
+            (tokenInput.value === "" || balanceInput.value === "") && <small>Preencha todos os campos!</small>
+          }
         </section>
         <section>
           <button

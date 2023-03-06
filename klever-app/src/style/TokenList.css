@@ -1,0 +1,48 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins, sans-serif;
+  color: white;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 95%;
+}
+
+.list-titles {
+  font-weight: 700;
+  font-size: .6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-token {
+  margin-left: 25px;
+}
+
+.list-balance {
+  margin-right: 25px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  word-break: break-all;
+}
+
+.list-item-token {
+  display: flex;
+  align-items: center;
+  max-width: 60%;
+}
+
+.list-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.list-icon img {
+  width: 20px;
+}

@@ -5,8 +5,8 @@ import { useContext } from "react";
 import TokenContext from "../context/TokenContext";
 import '../style/AddToken.css';
 
-function AddToken() {
-  const { tokenInput, balanceInput, handleClickSave, handleClickBack } = useContext(TokenContext);
+function EditToken() {
+  const { tokenInput, balanceInput, handleClickBack } = useContext(TokenContext);
 
   return (
     <div className="addtoken-container">
@@ -16,7 +16,7 @@ function AddToken() {
           <Title />
         </section>
         <section className="addtoken-subtitle-container">
-          <h2 className="addtoken-subtitle">Edit Token</h2>
+          <h2 className="addtoken-subtitle">Add Token</h2>
           <button
             className="addtoken-back-btn"
             onClick={handleClickBack}
@@ -28,7 +28,11 @@ function AddToken() {
         <section className="addtoken-btn-container">
           <button
             className="addtoken-save-btn"
-            onClick={handleClickSave}
+          >
+            Remove
+          </button>
+          <button
+            className="addtoken-save-btn"
             disabled={tokenInput.value === "" || balanceInput.value === ""}
           >
             Save
@@ -39,4 +43,4 @@ function AddToken() {
   )
 }
 
-export default AddToken;
+export default EditToken;

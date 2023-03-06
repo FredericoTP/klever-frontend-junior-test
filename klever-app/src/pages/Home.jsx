@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Title from '../components/Title';
+import TokenList from '../components/TokenList';
 import '../style/Home.css';
 
 function Home() {
+  const storage = JSON.parse(localStorage.getItem('tokens'));
+
   return (
     <div className="home-container">
       <Header />
@@ -11,6 +14,14 @@ function Home() {
         <section className="home-title-container">
           <Title />
           <Link className="home-title-btn" to="/add-token" >Add Token</Link>
+        </section>
+        <section>
+          {
+            (!storage || storage.length === 0) && <p>bad</p>
+          }
+          {
+            storage.length > 0 && <TokenList />
+          }
         </section>
       </main>
     </div>

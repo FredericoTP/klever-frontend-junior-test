@@ -21,7 +21,7 @@ function TokenProvider({ children }) {
     let bool = false
     array.forEach((item) => {
       const { token } = item;
-      if (tokenInput.value.toUpperCase() === token) {
+      if (tokenInput.value === token) {
         bool = true;
       }
     })
@@ -33,7 +33,7 @@ function TokenProvider({ children }) {
     if (checkTokens(tokens)) {
       setErro(true);
     } else {
-      const newTokens = JSON.stringify([...tokens, {token: tokenInput.value.toUpperCase(), balance: balanceInput.value}])
+      const newTokens = JSON.stringify([...tokens, {token: tokenInput.value, balance: balanceInput.value}])
       localStorage.setItem('tokens', newTokens);
       setErro(false);
       cleanInputs();
@@ -45,7 +45,7 @@ function TokenProvider({ children }) {
     if (localStorage.getItem('tokens')) {
       addLocalStorage();
     } else {
-      const tokenValue = JSON.stringify([{token: tokenInput.value.toUpperCase(), balance: balanceInput.value}]);
+      const tokenValue = JSON.stringify([{token: tokenInput.value, balance: balanceInput.value}]);
       localStorage.setItem('tokens', tokenValue);
       cleanInputs();
       history.push("/");
@@ -71,7 +71,7 @@ function TokenProvider({ children }) {
     if (checkTokens(tokensData)) {
       setErro(true);
     } else {
-      const newData = {token: tokenInput.value.toUpperCase(), balance: balanceInput.value}
+      const newData = {token: tokenInput.value, balance: balanceInput.value}
       tokensData.splice(indexToken, 0, newData);
       localStorage.setItem('tokens', JSON.stringify(tokensData));
       setErro(false);
@@ -80,8 +80,21 @@ function TokenProvider({ children }) {
     }
   }
 
+  function handleRemoveToken() {
+    const result = window.confirm('Deseja excluir o item?');
+    if (result) {
+      const tokensData = JSON.parse(localStorage.getItem('tokens'));
+      tokensData.splice(indexToken, 1);
+      localStorage.setItem('tokens', JSON.stringify(tokensData));
+      cleanInputs();
+      history.push("/");
+    } else {
+      history.push("/");
+    }
+  }
+
   return (
-    <TokenContext.Provider value={ { tokenInput, balanceInput, handleClickSave, erro, handleClickBack, handleEditIcon, indexToken, handleSaveEdit } }>
+    <TokenContext.Provider value={ { tokenInput, balanceInput, handleClickSave, erro, handleClickBack, handleEditIcon, indexToken, handleSaveEdit, handleRemoveToken } }>
       {children}
     </TokenContext.Provider>
   )

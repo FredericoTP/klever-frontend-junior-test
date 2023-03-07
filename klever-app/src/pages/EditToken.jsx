@@ -6,7 +6,7 @@ import TokenContext from "../context/TokenContext";
 import '../style/AddEditToken.css';
 
 function EditToken() {
-  const { tokenInput, balanceInput, handleClickBack, handleSaveEdit } = useContext(TokenContext);
+  const { tokenInput, balanceInput, handleClickBack, handleSaveEdit, handleRemoveToken } = useContext(TokenContext);
 
   return (
     <div className="addEdit-container">
@@ -28,6 +28,7 @@ function EditToken() {
         <section className="edit-btn-container">
           <button
             className="edit-remove-btn"
+            onClick={ handleRemoveToken }
           >
             Remove
           </button>

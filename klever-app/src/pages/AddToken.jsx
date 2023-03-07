@@ -3,7 +3,7 @@ import Title from "../components/Title";
 import Form from "../components/Form";
 import { useContext } from "react";
 import TokenContext from "../context/TokenContext";
-import '../style/AddToken.css';
+import '../style/AddEditToken.css';
 
 function AddToken() {
   const { tokenInput, balanceInput, handleClickSave, handleClickBack } = useContext(TokenContext);

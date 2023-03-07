@@ -3,10 +3,10 @@ import Title from "../components/Title";
 import Form from "../components/Form";
 import { useContext } from "react";
 import TokenContext from "../context/TokenContext";
-import '../style/AddToken.css';
+import '../style/AddEditToken.css';
 
 function EditToken() {
-  const { tokenInput, balanceInput, handleClickBack } = useContext(TokenContext);
+  const { tokenInput, balanceInput, handleClickBack, handleSaveEdit } = useContext(TokenContext);
 
   return (
     <div className="addEdit-container">
@@ -33,6 +33,7 @@ function EditToken() {
           </button>
           <button
             className="addEdit-save-btn"
+            onClick={ handleSaveEdit }
             disabled={tokenInput.value === "" || balanceInput.value === ""}
           >
             Save

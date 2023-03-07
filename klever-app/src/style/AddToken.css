@@ -1,32 +1,32 @@
-.addtoken-container {
+.addEdit-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  background-color: rgba(19,21,42,255);
+  background-color: rgb(19, 21, 42);
 }
 
-.addtoken-main {
+.addEdit-main {
   display: flex;
   flex-direction: column;
   width: 95%;
   margin: 0 auto;
 }
 
-.addtoken-subtitle-container {
+.addEdit-subtitle-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem .5rem;
 }
 
-.addtoken-subtitle {
+.addEdit-subtitle {
   color: white;
   font-family: Poppins, sans-serif;
   font-size: 1rem;
 }
 
-.addtoken-back-btn {
+.addEdit-back-btn {
   background-color: rgb(99, 99, 103);
   border: none;
   border-radius: 5px;
@@ -47,8 +47,8 @@
   padding: 2rem .5rem;
 }
 
-.addtoken-save-btn {
-  background-color: rgb(170,51,181);
+.addEdit-save-btn {
+  background-color: rgb(170, 51, 181);
   border: none;
   border-radius: 5px;
   color: white;
@@ -61,6 +61,25 @@
   width: 70px;
 }
 
-.addtoken-save-btn:disabled {
+.addEdit-save-btn:disabled {
   color: rgb(136, 136, 136);
+}
+
+.edit-btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem .5rem;
+}
+
+.edit-remove-btn {
+  background-color: rgb(125, 12, 10);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: Poppins, sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 5px 15px;
 }

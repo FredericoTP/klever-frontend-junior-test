@@ -20,13 +20,23 @@
   padding-bottom: 3px;
 }
 
-.form-input {
+.form-input, .form-input-balance {
   font-family: Poppins, sans-serif;
   font-weight: 400;
   padding: 4px 7px;
   font-size: .8rem;
   border-radius: 5px;
   border: none;
+}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+  appearance:textfield;
+}
+
+.form-input-balance::-webkit-outer-spin-button,
+.form-input-balance::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .form-small {

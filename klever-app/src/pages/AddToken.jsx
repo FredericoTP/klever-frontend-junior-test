@@ -9,16 +9,16 @@ function AddToken() {
   const { tokenInput, balanceInput, handleClickSave, handleClickBack } = useContext(TokenContext);
 
   return (
-    <div className="addtoken-container">
+    <div className="addEdit-container">
       <Header />
-      <main className="addtoken-main">
+      <main className="addEdit-main">
         <section>
           <Title />
         </section>
-        <section className="addtoken-subtitle-container">
-          <h2 className="addtoken-subtitle">Edit Token</h2>
+        <section className="addEdit-subtitle-container">
+          <h2 className="addEdit-subtitle">Edit Token</h2>
           <button
-            className="addtoken-back-btn"
+            className="addEdit-back-btn"
             onClick={handleClickBack}
           >
             Voltar
@@ -27,7 +27,7 @@ function AddToken() {
         <Form />
         <section className="addtoken-btn-container">
           <button
-            className="addtoken-save-btn"
+            className="addEdit-save-btn"
             onClick={handleClickSave}
             disabled={tokenInput.value === "" || balanceInput.value === ""}
           >

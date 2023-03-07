@@ -10,6 +10,7 @@ function TokenProvider({ children }) {
   const balanceInput = useInput();
   const history = useHistory();
   const [erro, setErro] = useState(false);
+  const [indexToken, setIndexToken] = useState();
 
   function cleanInputs() {
     tokenInput.setValue('');
@@ -58,8 +59,16 @@ function TokenProvider({ children }) {
     history.push("/");
   }
 
+  function handleEditIcon(index, item) {
+    tokenInput.setValue(item.token);
+    balanceInput.setValue(item.balance);
+    setIndexToken(index);
+    console.log(index);
+    history.push("/edit-token");
+  }
+
   return (
-    <TokenContext.Provider value={ { tokenInput, balanceInput, handleClickSave, erro, handleClickBack } }>
+    <TokenContext.Provider value={ { tokenInput, balanceInput, handleClickSave, erro, handleClickBack, handleEditIcon, indexToken } }>
       {children}
     </TokenContext.Provider>
   )

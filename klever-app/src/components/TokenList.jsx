@@ -1,7 +1,10 @@
+import { useContext } from 'react';
+import TokenContext from '../context/TokenContext';
 import image from '../assets/edit.svg';
 import '../style/TokenList.css';
 
 function TokenList() {
+  const { handleEditIcon } = useContext(TokenContext);
   const storage = JSON.parse(localStorage.getItem('tokens'));
 
   return (
@@ -11,10 +14,13 @@ function TokenList() {
         <p className="list-balance">Balance</p>
       </div>
       {
-        storage.map((item) => (
-          <div className="list-item">
+        storage.map((item, index) => (
+          <div key={ index } className="list-item">
             <div className="list-item-token">
-              <button className="list-icon">
+              <button
+                onClick={ () => handleEditIcon(index, item) }
+                className="list-icon"
+              >
                 <img src={ image } alt="edit-icon" />
               </button>
               <p>{item.token}</p>

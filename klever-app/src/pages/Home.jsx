@@ -20,7 +20,7 @@ function Home() {
             (!storage || storage.length === 0) && <p>bad</p>
           }
           {
-            storage.length > 0 && <TokenList />
+            (!!storage && storage.length > 0) && <TokenList />
           }
         </section>
       </main>

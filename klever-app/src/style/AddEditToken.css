@@ -83,3 +83,52 @@
   font-weight: 600;
   padding: 5px 15px;
 }
+
+@media screen and ( min-width : 400px ) {
+  .addEdit-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media screen and ( min-width : 600px ) {
+  .addEdit-container {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+@media screen and ( min-width : 768px ) {
+  .addEdit-container {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .addEdit-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and ( min-width : 992px ) {
+  .addEdit-container {
+    margin: 0 auto;
+    width: 45%;
+  }
+}
+
+@media screen and ( min-width : 1200px ) {
+  .addEdit-container {
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  .addEdit-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .addEdit-back-btn, .addEdit-save-btn, .edit-remove-btn {
+    font-size: .9rem;
+    padding: 10px 40px;
+    width: 145px;
+  }
+}

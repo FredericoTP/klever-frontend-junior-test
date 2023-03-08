@@ -46,3 +46,44 @@
 .list-icon img {
   width: 20px;
 }
+
+@media screen and ( min-width : 600px ) {
+  .list-titles {
+    font-size: .7rem;
+    padding-bottom: 10px;
+  }
+
+  .list-item {
+    padding: 5px 0;
+  }
+
+  .list-item p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and ( min-width : 768px ) {
+  .list-icon img {
+    width: 25px;
+  }
+}
+
+@media screen and ( min-width : 992px ) {
+  .list-titles {
+    font-size: .8rem;
+  }
+}
+
+@media screen and ( min-width : 1200px ) {
+  .list-titles {
+    font-size: .9rem;
+  }
+
+  .list-icon img {
+    width: 30px;
+  }
+
+  .list-item p {
+    font-size: 1.5rem;
+  }
+}

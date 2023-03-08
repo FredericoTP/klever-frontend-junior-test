@@ -24,9 +24,9 @@ function Form() {
       <div className="form-box">
         <label className="form-label" htmlFor="balance">Balance</label>
         <input
-          className="form-input"
+          className="form-input-balance"
           id="balance"
-          type="text"
+          type="number"
           value={ balanceInput.value }
           onChange={ balanceInput.handleChange}
           placeholder="10,250.50"

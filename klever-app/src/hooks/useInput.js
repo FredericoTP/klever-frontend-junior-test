@@ -4,7 +4,7 @@ function useInput() {
   const [value, setValue] = useState('');
 
   function handleChange(event) {
-    setValue(event.target.value);
+    setValue(event.target.value.toUpperCase());
   }
 
   return {

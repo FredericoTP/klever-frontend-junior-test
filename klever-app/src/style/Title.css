@@ -5,7 +5,6 @@
 
 .title-image {
   width: 40px;
-  color: yellow;
   margin: 0 10px 0 0;
 }
 
@@ -13,4 +12,30 @@
   color: white;
   font-family: Poppins, sans-serif;
   font-size: 1rem;
+}
+
+@media screen and ( min-width : 600px ) {
+  .title-h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and ( min-width : 768px ) {
+  .title-image {
+    width: 50px;
+  }
+
+  .title-h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and ( min-width : 1200px ) {
+  .title-image {
+    width: 60px;
+  }
+
+  .title-h1 {
+    font-size: 1.7rem;
+  }
 }

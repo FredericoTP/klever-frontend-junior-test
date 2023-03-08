@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Title from '../components/Title';
 import TokenList from '../components/TokenList';
 import '../style/Home.css';
+import image from '../assets/empty-wallet.svg';
 
 function Home() {
   const storage = JSON.parse(localStorage.getItem('tokens'));
@@ -17,7 +18,12 @@ function Home() {
         </section>
         <section>
           {
-            (!storage || storage.length === 0) && <p>bad</p>
+            (!storage || storage.length === 0) && (
+              <div>
+                <img src={ image } alt="empty-wallet" />
+                <p>Adicione algum Token!</p>
+              </div>
+            )
           }
           {
             (!!storage && storage.length > 0) && <TokenList />

@@ -19,7 +19,7 @@ function Home() {
         <section>
           {
             (!storage || storage.length === 0) && (
-              <div>
+              <div className="home-empty-container">
                 <img src={ image } alt="empty-wallet" />
                 <p>Adicione algum Token!</p>
               </div>

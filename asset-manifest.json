@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/klever-frontend-junior-test/static/css/main.0aa0f828.css",
-    "main.js": "/klever-frontend-junior-test/static/js/main.1028e857.js",
+    "main.js": "/klever-frontend-junior-test/static/js/main.4faa523b.js",
     "static/media/shooting-star.svg": "/klever-frontend-junior-test/static/media/shooting-star.161335913ef461fda83ce25f642f6baf.svg",
     "static/media/error.svg": "/klever-frontend-junior-test/static/media/error.06d526cc4df91b4ad7c8e607f802e3aa.svg",
     "static/media/logo.svg": "/klever-frontend-junior-test/static/media/logo.e508030155275995c5f38fe7de486727.svg",
@@ -9,10 +9,10 @@
     "index.html": "/klever-frontend-junior-test/index.html",
     "static/media/edit.svg": "/klever-frontend-junior-test/static/media/edit.7e9f698cc64da1b5b647d78388df55ec.svg",
     "main.0aa0f828.css.map": "/klever-frontend-junior-test/static/css/main.0aa0f828.css.map",
-    "main.1028e857.js.map": "/klever-frontend-junior-test/static/js/main.1028e857.js.map"
+    "main.4faa523b.js.map": "/klever-frontend-junior-test/static/js/main.4faa523b.js.map"
   },
   "entrypoints": [
     "static/css/main.0aa0f828.css",
-    "static/js/main.1028e857.js"
+    "static/js/main.4faa523b.js"
   ]
 }

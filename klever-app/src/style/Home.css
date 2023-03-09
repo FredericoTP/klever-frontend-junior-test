@@ -34,6 +34,26 @@ body {
   background-color: rgb(99, 41, 118);
 }
 
+.home-empty-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.home-empty-container img {
+  width: 100px;
+}
+
+.home-empty-container p {
+  font-family: Poppins, sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  padding-top: 20px;
+}
+
 @media screen and ( min-width : 400px ) {
   .home-container {
     margin: 0 auto;
@@ -59,6 +79,10 @@ body {
   .home-container {
     margin: 0 auto;
     width: 45%;
+  }
+
+  .home-empty-container p {
+    font-size: 1rem;
   }
 }
 

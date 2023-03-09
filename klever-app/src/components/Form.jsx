@@ -8,7 +8,7 @@ function Form() {
   return (
     <form className="form-container">
       <div className="form-box">
-        <label className="form-label" htmlFor="token">Token</label>
+        <label data-testid="label-token" className="form-label" htmlFor="token">Token</label>
         <input
           className="form-input"
           id="token"
@@ -22,7 +22,7 @@ function Form() {
         }
       </div>
       <div className="form-box">
-        <label className="form-label" htmlFor="balance">Balance</label>
+        <label data-testid="label-balance" className="form-label" htmlFor="balance">Balance</label>
         <input
           className="form-input-balance"
           id="balance"

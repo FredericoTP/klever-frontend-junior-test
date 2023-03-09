@@ -16,7 +16,7 @@ function AddToken() {
           <Title />
         </section>
         <section className="addEdit-subtitle-container">
-          <h2 className="addEdit-subtitle">Edit Token</h2>
+          <h2 className="addEdit-subtitle">Add Token</h2>
           <button
             className="addEdit-back-btn"
             onClick={handleClickBack}

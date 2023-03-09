@@ -4,7 +4,11 @@ import '../style/Header.css';
 function Header() {
   return (
     <header className="header-container">
-      <img className="header-logo" src={ image } alt="klever-logo" />
+      <img
+        data-testid="header-logo"
+        className="header-logo"
+        src={ image } alt="klever-logo"
+      />
     </header>
   )
 }

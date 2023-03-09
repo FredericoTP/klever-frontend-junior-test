@@ -14,14 +14,20 @@ function Home() {
       <main className="home-box">
         <section className="home-title-container">
           <Title />
-          <Link className="home-title-btn" to="/add-token" >Add Token</Link>
+          <Link
+            data-testid="home-title-btn"
+            className="home-title-btn"
+            to="/add-token"
+          >
+            Add Token
+          </Link>
         </section>
         <section>
           {
             (!storage || storage.length === 0) && (
               <div className="home-empty-container">
-                <img src={ image } alt="empty-wallet" />
-                <p>Adicione algum Token!</p>
+                <img data-testid="home-empty-image" src={ image } alt="empty-wallet" />
+                <p data-testid="home-empty-text">Adicione algum Token!</p>
               </div>
             )
           }

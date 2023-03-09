@@ -29,7 +29,7 @@ function Form() {
           type="number"
           value={ balanceInput.value }
           onChange={ balanceInput.handleChange}
-          placeholder="10,250.50"
+          placeholder="10250,50"
         />
         {
           (tokenInput.value === "" || balanceInput.value === "") && <small className="form-small">Preencha todos os campos!</small>
